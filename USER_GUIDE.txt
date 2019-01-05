@@ -1,0 +1,165 @@
+==========================================================================
+		      DirectX 12 project - User guide
+==========================================================================
+Project name: 
+	- WY_PROJ_DIRECTX_12.
+
+Objectives:
+	- Advanced technology on computer graphics.
+	- 3D engine framework.
+
+Staff:
+	- Lead programmer   : Samil Chai.
+	- Junior programmer : Nick Jang.
+	
+	- Copy right to Samil Chai.
+
+Start date: 2017-03-10
+End date  : 2017-06-29
+
+WY_PROJ_DIRECTX_12 UWP Environment:
+	- Microsoft Windows 10 64 bits Home resion 1607 (Build 14393).
+	- Microsoft Windows 10 SDK 10.0.14393.
+	- Microsoft Visual Studio Community 2017 Version 4.6.01586.
+	
+	- System type 	: 64-bit operating system, x64-based processor.
+	- Processor 	: AMD A10-5745M APU with Rradeon HD Graphics 2.10 GHz.
+	- Installed RAM : 8.00 GB.
+	- Graphics card	: AMD Radeon HD 8610 G.
+		- Direct3D DDI : 11.2.
+		- AMD releases list of compativle DirectX 12 GPUs & APUs : [ https://www.gamespot.com/forums/pc-and-av-hardware-909394553/amd-releases-list-of-compatible-directx-12-gpus-ap-32058329/ ]		
+
+Start date: 2017-06-29
+End date  :
+
+WY_PROJ_DIRECTX_12_WIN32 Win32 Environment:
+	- Microsoft Windows 10 Boot Camp with Macbook:
+		- MacBook Pro 12,1 (Retina, 13-inch, Early 2015):
+			- System type 	: 64-bit operating system, x64-based processor.
+			- Processor 	: Intel(R) Core(TM) i5-5287U CPU @ 2.90GHz 2.90.
+			- Installed RAM : 8.00 GB.
+			- Graphics card : Intel(R0 Iris(TM) Graphics 6100.
+		- Boot Camp assistant version:
+			- Version:		Boot Camp Assistant 6.1.0, Copyright © 2016 Apple Inc. All rights reserved.
+			- Created: 		Friday, July 15, 2016 at 11:04 PM.
+			- Capacity: 		250GB.
+	- Bootcamp Microsoft Windows 10 64 bits Home.
+	- Microsoft Windows 10 SDK 10.0.15063.0.
+	- Microsoft Visual Studio Community 2017 Version 15.2 (26430.12) Release.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+				User guide
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+(0) DirectX 12 coordinate system is [X right Y up Z forward]
+	
+
+(A) Environment setup (Win32):
+	- Install Visual Studio 2017 (Windows 10 SDK)
+		======================================================================
+		DirectX 12 Installation with Visual Studio 2017
+		======================================================================
+		(WARNING : Windows 10 SDK must be installed before installing Visual Studio, or else VS cannot access SDK to find related header file eg.d3d12.h).
+		1. Download [ https://www.visualstudio.com/vs/ ].
+		2. Run executable for installation.
+		3. Check [ Windows 10 SDK 10.0.15063.0 ] option.
+		4. Read through and follow instructions on [ https://www.braynzarsoft.net/viewtutorial/q16390-03-initializing-directx-12 ].
+		5. Create new Win32 project following instructions above and test the code to check whether DirectX is working. 
+		======================================================================
+
+(A-1) Compiling mode: [Debug x64]
+(A-2) To test the model loader mechanism, i need to export with following options through Blender app:
+		1. Export --> .obj
+		2. Check "Triangulate faces" option
+		3. Set "Path mode" to "Relative"
+		4. Click "Export"
+		5. Make sure is loading from a valid file name!!!
+
+
+(B) Additional installations (For UWP):
+	======================================================================
+	Keyboard and mouse listener using DirectXTK
+	======================================================================
+	1. Install DirectXTK:
+		- DirectXTK install instructions - [ https://github.com/Microsoft/DirectXTK/wiki/Adding-the-DirectX-Tool-Kit ].
+	2. Test sample code:
+		- DirectXTK keyboard and mouse inputs example - [ https://github.com/Microsoft/DirectXTK/wiki/Mouse-and-keyboard-input ].
+	3. Header problem:
+		- DirectXTK keyboard (header file <Keyboard.h>) - [ http://directxtk.codeplex.com/wikipage?title=Keyboard ].
+	======================================================================
+
+(B1) How to create new project:
+	- Open Visual Studio 2017 
+		--> File --> New --> Project 
+		--> Select "Visual C++" template --> Select "DirectX 12 App (Universal Windows)"
+		--> Give a name (eg. "WY_PROJ_DIRECTX_12") --> Click "OK"
+		--> Build and run --> Check if a colorful cube is appeared on the new window poped up spinning it self along y axis.
+
+(B2) How to run project:
+	- Open [ WY_DIRECTX_12.sln ] in main project directory --> Press [F5] or [Cltr + F5] to run the app.
+
+
+(C) Project runtime issues (MUST read if this project is being ran on other CPU):
+	1. OBJ loader - Cannot find .obj file path problem (The app window either doesn't crash or outputs error messages)
+	2. MTL loader - Cannot find .mtl file path problem (The app window doesn't crash but outputs linking error message related to "WindowsApplication").
+	3. MTL texture image loader - Cannot find .mtl map_Kd texture image path.
+
+(D) Visual Studio 2017 and Windows 10 debugging issues:
+	1. Each files must have "#pragma once" on top.
+	2. Visual Studio 2017 comment out shortcut 
+		- [Ctlr + K -> C].
+		- Edit --> Advanced --> Comment selecton.
+	   Visual Studio 2017 comment in shortcut: 
+		- [Ctlr + K -> U].
+		- Edit --> Advanced --> Uncomment selecton.
+	3. Visual Studio 2017 find code in all files: 
+		- [Control + Shift + F].
+		- Edit --> Find and Replace --> Find in files. 
+	4. Project folder cannot be copied or moved because other app window not terminated problem:
+		- Task Manager --> Find and right click "wsappx" --> Click "End task"
+	5. Project folder cannot be copied or moved because the file name is too long problem:
+		- Just have to make the folder name shorter, so that the full path to each files doesn't exceed the Windows 10 OS limited path length.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		User guide - Absolute path access
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+At [Sample3DSceneRenderer.cpp]
+	Loading first model:
+		OBJ - C:\Users\nickj\Desktop\Debug\WY_PROJ_DIRECTX_12\AppX\myOBJ.txt
+		MTL - C:\Users\nickj\Desktop\Debug\WY_PROJ_DIRECTX_12\AppX\modelloader_test_rectangle\modelloader_test_rectangle\modelloader_test_rectangle.mtl
+		- Find code and change "mySpecialModelObj = myModelLoader->objMtlLoader("C:\\Users\\nickj\\Desktop\\WY_PROJ_DIRECTX_12\\Debug\\WY_PROJ_DIRECTX_12\\AppX\\myOBJ.txt", "C:\\Users\\nickj\\Desktop\\WY_PROJ_DIRECTX_12\\Debug\\WY_PROJ_DIRECTX_12\\AppX\\modelloader_test_rectangle\\modelloader_test_rectangle\\modelloader_test_rectangle.mtl");"
+		
+		Texture image - C:\Users\nickj\Desktop\WY_PROJ_DIRECTX_12\Debug\WY_PROJ_DIRECTX_12\AppX\image_test_numbers.png	
+		- Change absolute path inside MTL for texture image (map_Kd)	
+				
+	Loading second model:
+		OBJ - C:\Users\nickj\Desktop\Debug\WY_PROJ_DIRECTX_12\AppX\modelloader_test_rectangle\modelloader_test_rectangle\modelloader_test_rectangle.obj
+		MTL - C:\Users\nickj\Desktop\Debug\WY_PROJ_DIRECTX_12\AppX\modelloader_test_rectangle\modelloader_test_rectangle\modelloader_test_rectangle.mtl
+		- Find code "mySpecialModelObj2 = myModelLoader->objMtlLoader("C:\\Users\\nickj\\Desktop\\WY_PROJ_DIRECTX_12\\Debug\\WY_PROJ_DIRECTX_12\\AppX\\modelloader_test_rectangle\\modelloader_test_rectangle\\modelloader_test_rectangle.obj", "C:\\Users\\nickj\\Desktop\\WY_PROJ_DIRECTX_12\\Debug\\WY_PROJ_DIRECTX_12\\AppX\\modelloader_test_rectangle\\modelloader_test_rectangle\\modelloader_test_rectangle.mtl");"
+		
+		Texture image - C:\Users\nickj\Desktop\WY_PROJ_DIRECTX_12\Debug\WY_PROJ_DIRECTX_12\AppX\image_test_numbers.png	
+		- Change absolute path inside MTL for texture image (map_Kd)
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+		User guide - Extra debugging options
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Currently I'm drawing 2 models, one with myOBJ.txt and other one with original .obj file.
+	At [Sameple3DSceneRenderer.cpp - Render() function]
+	- Hide first model:
+		Find and comment out the code - "m_commandList->DrawIndexedInstanced(this->mySpecialModelObj->getIndicesCount(), 1, 0, 0, 0);"
+	- Uncomment to unhide.
+	- Hide second model:
+		Find and comment out the code - "m_commandList->DrawIndexedInstanced(this->mySpecialModelObj2->getIndicesCount(), 1, 0, 0, 0);"
+	- Uncomment to unhide.
+
+Add key inputs to translate, rotate or scale the model.
+	At [Sameple3DSceneRenderer.cpp - modelTransformKeyboardListener() function]
+	Using if (kb.KEY), replace "KEY" with wanted key input (eg. [W] key to move), then call the transform function of the wanted model and give them the x, y, z values for transform.
+		Move - moveModelXYZ(command_list, x, y, z)
+		Rotate - rotateModelXYZ(command_list, x, y, z)
+		Scale - scaleModelXYZ(command_list, x, y, z)
+	(Since DirectX12 coordinate system is [X left Y up Z forward], when moving to positive X axis the model is moved to the left).
+
+
+

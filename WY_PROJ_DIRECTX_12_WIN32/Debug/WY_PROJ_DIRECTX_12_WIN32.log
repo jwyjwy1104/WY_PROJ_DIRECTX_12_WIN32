@@ -1,0 +1,17 @@
+﻿  compilation object save succeeded; see C:\Users\Nick Jang\Desktop\WY_PROJ_DIRECTX_12_WIN32_ver0002\Debug\PixelShader.cso
+  compilation object save succeeded; see C:\Users\Nick Jang\Desktop\WY_PROJ_DIRECTX_12_WIN32_ver0002\Debug\VertexShader.cso
+  MySpecialModel.cpp
+  MyModelLoader.cpp
+  main.cpp
+c:\users\nick jang\desktop\wy_proj_directx_12_win32_ver0002\wy_proj_directx_12_win32\main.cpp(789): warning C4244: '=': conversion from 'int' to 'FLOAT', possible loss of data
+c:\users\nick jang\desktop\wy_proj_directx_12_win32_ver0002\wy_proj_directx_12_win32\main.cpp(790): warning C4244: '=': conversion from 'int' to 'FLOAT', possible loss of data
+c:\users\nick jang\desktop\wy_proj_directx_12_win32_ver0002\wy_proj_directx_12_win32\main.cpp(1100): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\nick jang\desktop\wy_proj_directx_12_win32_ver0002\wy_proj_directx_12_win32\main.cpp(1101): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Line.cpp
+  Camera.cpp
+  Generating Code...
+main.obj : error LNK2019: unresolved external symbol _D3D12SerializeRootSignature@16 referenced in function "bool __cdecl InitD3D(void)" (?InitD3D@@YA_NXZ)
+main.obj : error LNK2019: unresolved external symbol _D3D12CreateDevice@16 referenced in function "bool __cdecl InitD3D(void)" (?InitD3D@@YA_NXZ)
+main.obj : error LNK2019: unresolved external symbol _CreateDXGIFactory1@8 referenced in function "bool __cdecl InitD3D(void)" (?InitD3D@@YA_NXZ)
+main.obj : error LNK2019: unresolved external symbol _D3DCompileFromFile@36 referenced in function "bool __cdecl InitD3D(void)" (?InitD3D@@YA_NXZ)
+C:\Users\Nick Jang\Desktop\WY_PROJ_DIRECTX_12_WIN32_ver0002\Debug\WY_PROJ_DIRECTX_12_WIN32.exe : fatal error LNK1120: 4 unresolved externals

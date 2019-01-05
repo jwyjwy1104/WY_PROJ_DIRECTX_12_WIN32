@@ -1,0 +1,51 @@
+﻿  compilation object save succeeded; see C:\Users\Nickj\Desktop\WY_PROJ_ENGINE\WY_PROJ_BLENDER_DIRECTX\WY_PROJ_DIRECTX_12_WIN32\x64\Debug\PixelShader.cso
+  compilation object save succeeded; see C:\Users\Nickj\Desktop\WY_PROJ_ENGINE\WY_PROJ_BLENDER_DIRECTX\WY_PROJ_DIRECTX_12_WIN32\x64\Debug\TextPixelShader.cso
+  compilation object save succeeded; see C:\Users\Nickj\Desktop\WY_PROJ_ENGINE\WY_PROJ_BLENDER_DIRECTX\WY_PROJ_DIRECTX_12_WIN32\x64\Debug\TextVertexShader.cso
+C:\Users\Nickj\Desktop\WY_PROJ_ENGINE\WY_PROJ_BLENDER_DIRECTX\WY_PROJ_DIRECTX_12_WIN32\WY_PROJ_DIRECTX_12_WIN32\VertexShader.hlsl(52,14-30): warning X3578: Output value 'main' is not completely initialized
+  
+  compilation object save succeeded; see C:\Users\Nickj\Desktop\WY_PROJ_ENGINE\WY_PROJ_BLENDER_DIRECTX\WY_PROJ_DIRECTX_12_WIN32\x64\Debug\VertexShader.cso
+  Util.cpp
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\util.cpp(597): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\util.cpp(602): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\util.cpp(610): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\util.cpp(614): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\util.cpp(619): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\util.cpp(624): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\util.cpp(635): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\util.cpp(640): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\util.cpp(645): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\util.cpp(650): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\util.cpp(662): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\util.cpp(690): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\util.cpp(700): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\util.cpp(705): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\util.cpp(710): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\util.cpp(715): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\util.cpp(722): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\util.cpp(729): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\util.cpp(734): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\util.cpp(739): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\util.cpp(749): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\util.cpp(759): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\util.cpp(764): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\util.cpp(769): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  MySpecialModelObjMtl.cpp
+  MyModelObj.cpp
+  MyModelMtl.cpp
+  MyModelLoader.cpp
+  MyModelArmatureBone.cpp
+  MyModelArmature.cpp
+  MyModelAnimationBoneData.cpp
+  MyModelAnimationBone.cpp
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\mymodelanimationbone.cpp(309): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  MyModelAnimation.cpp
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\mymodelanimation.cpp(217): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  MyFont.cpp
+  ModelObj.cpp
+  ModelMtl.cpp
+  main.cpp
+  Line.cpp
+  Camera.cpp
+  Generating Code...
+c:\users\nickj\desktop\wy_proj_engine\wy_proj_blender_directx\wy_proj_directx_12_win32\wy_proj_directx_12_win32\util.cpp(808): warning C4715: 'Util::isFileExist': not all control paths return a value
+  WY_PROJ_DIRECTX_12_WIN32.vcxproj -> C:\Users\Nickj\Desktop\WY_PROJ_ENGINE\WY_PROJ_BLENDER_DIRECTX\WY_PROJ_DIRECTX_12_WIN32\x64\Debug\WY_PROJ_DIRECTX_12_WIN32.exe

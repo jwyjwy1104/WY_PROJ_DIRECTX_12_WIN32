@@ -1,0 +1,445 @@
+==========================================================================
+		DirectX 12 project - Revision history
+==========================================================================
+Project name: 
+	- WY_PROJ_DIRECTX_12.
+
+Project directory:
+	- C:\Users\nickj\Desktop\Season2\20170318_[Engine_initializing_DirectX12]
+	- C:\Users\nickj\Desktop\Season2\20170325_[Engine_documenting]
+	- C:\Users\nickj\Desktop\Season2\20170401_[Engine_textureloader_testing_with_morecomplexmodel]
+	- C:\Users\nickj\Desktop\Season2\20170410_[Engine_movemodels_independently_done]
+	- C:\Users\nickj\Desktop\Season2\20170415_[Engine_gameditor_scenemanager]
+	- C:\Users\nickj\Desktop\Season2\20170424_[Engine_blenderexporter_coordincatesystems]
+	- C:\Users\nickj\Desktop\Season2\20170501_[Engine_vertexnormalintro_vertexoptimizationintro]
+	- C:\Users\nickj\Desktop\Season2\20170515_[Engine_refactoring]
+	- C:\Users\nickj\Desktop\Season2\20170603_[Engine_constantbuffer]
+	- C:\Users\nickj\Desktop\Season2\20170616_[Life_consulting_counseling]
+---------------------------------------------------------------------------
+C:\Users\nickj\Desktop\Season2\20170318_[Engine_initializing_DirectX12]
+---------------------------------------------------------------------------
+[ WY_DIRECTX_12 ]
+201703181600
+201703181800	ver00001	Initalizing DirectX 12 failed, cannot find device problem unsolved.
+201703182000	ver00002	Initalizing DirectX 12 failed with Sam, system check, updated GPU, DirectX 12 running check done, still cannot find device problem unsolved.
+
+[ ObjLoader ]
+201703201615
+201703202108	ver0001		Modularized model loader code into classes after checking that the code works.
+201703202131	ver0002		Back up before importing to main project.
+201703202139	ver0003		Save-point.
+
+[ WY_PROJ_DIRECTX_12 ]
+201703202108
+201703210007	ver0001		OBJ loader imported to main DirectX 12 project, ifstream not working problem solved.
+201703210111	ver0002		DirectX 12 project API, ofstream not working problem unsolved.
+
+201703231813
+201703232000 	ver0003		DirectX 12 project API, ofstream not working problem solved.
+201703232000 	ver0004		Model loader converted value check done.
+201703240100	ver0005		Drawing mind map, class diagrams, sequence diagrams, converted OBJ file vertices and indices buffers ready to use on rendering the model.
+201703240121	ver0006		Failed to draw the primitive, buffers check done + savepoint.		
+
+201703241820	
+201703241927	ver0007		Something is drawn onto the screen succes, but cannot recognizie its shape properly.
+201703241951	ver0008		Testing with simpler rectangular model, adjusting camera position for better view, the shape can be recgonized, but missing half triangles on each faces.
+201703240130	ver0009		Model missing half triangle on each faces problem unsolved.
+
+201703251300
+201703251500	ver0010		Inserting triangle indices manually for final check, still doesn't solve the missing half triangle problem.	
+
+---------------------------------------------------------------------------
+C:\Users\nickj\Desktop\Season2\20170325_[Engine_documenting]
+---------------------------------------------------------------------------
+[ WY_PROJ_DIRECTX_12 ]
+201703251700	ver0011		Save-point after Sam, but nothing changed.	
+
+201703272300	
+201703280100	ver0012		Model loader complete. Missing half triangle problem solved using triangulated faces (Gaming - triangular polygon, Modelling - quad), Missing faces on rotation problem solved by setting rasterizer state cull to none, invisible geometry problem solved.
+201703282021	ver0013		Save-point before testing load texture code.
+201703282248	ver0014		Code brought from Zeros tutorial doesn't work when imported to my project.
+201703282303	ver0015		Main project fucked up after importing above tutorial code, even model doesn't load properly now, so backup and start with older version.
+
+201703282303
+201703282337	ver0016		Texture loader not started, working model loader save-point.
+
+201703291800
+201703292347	ver0017		Another save-point before start importing tutorial code to main project.
+201703300030	ver0018		Imported partial tutorial codes, root signature, parameters, range related code not started.
+
+201703301500
+201703301825	ver0019		Nothing is change in code, but the summary document of loading texture framework flow is added to main project.
+201703301959	ver0020		Working checkerboard texture following Zero Tutorials textured cube, but the result is not the same as shown at the most bottom of the tutorial.
+201703302021	ver0021		Complete textured cube from Zero Tutorials.
+201703302154	ver0022		Using model loader converted texture coordinates to render checkerboard texture, texture stretching problem unsolved.
+201703302220	ver0023		Adjust Blender texture layout, check if texture coordinates changes, if it does then there should be no problem with texture coordinates but just need to load texture image onto the model.
+201273310024    ver0024		Working load texture onto the model loaded with model loader, but the texture stretching problem still occurs unsolved.
+
+201703311300
+201703311736	ver0025		Manually inserting duplicated vertices value calculated by hand, result nothing has changed.
+201703312035	ver0026		Manually inserting duplicated vertices value converted using texture coordinates count, result nothing has changed.
+201703312110	ver0027		Manually inserting duplicated vertices value rounded up check, still result nothing changed.
+201703312151	ver0028		Only part of the vertices are duplicated, something has changed, only top bottom right side faces are not rendered properly where other 3 faces are.
+201703312212	ver0029		My loading texture algorithm applied to all texture coordinates, texture is rendered onto the rectangular cube properly, mapped correctly.
+201703312231	ver0030		Savepoint load texture from file complete.
+201704010109	ver0031		Commenting important algorithms, sources, mini project document on top.
+
+201704011300
+201704011607	ver0032		Functionalize main duplicating vertices algorithms cooresponding to texture coordinate indices onto ModelObj class, refactoring.
+201704011700	ver0033		Necessary functions added to ModelObj class to help on .mtl file, material loader.
+
+---------------------------------------------------------------------------
+C:\Users\nickj\Desktop\Season2\20170401_[Engine_textureloader_testing_with_morecomplexmodel]
+---------------------------------------------------------------------------
+[ WY_PROJ_DIRECTX_12 ]
+201704021700
+201704022201	ver0034		External hard drive install ... partitioning on Windows researching, inverted vertices z value, texture image now is rendered correctly.
+201704030106	ver0035		Loading comlex Minions model with texture (Failed with Sam), texture image flickering problem still unsolved.
+
+201704031330	
+201704031503	ver0036		Complex Minions model with texture loading success, texture image flickering problem was because the texture image size and the texture resource description size was different, so the actual image is rendered expanded.
+201704031705	ver0037		Vertices buffer initializing on heap memory not done.
+
+201704032317	
+201704032347	ver0038		Vertices buffer initializing on heap memory done.
+201704040007	ver0039		Indices buffer initializing on heap memory done.
+201704040025	ver0040		Save-point.
+
+201704041700	
+201704042115    ver0041		DirectXTK installed, keyboard listener testing not done with error.
+201704042356	ver0042		Keyboard listener handling escape key to exit the app success.
+201704050140	ver0043		Setup + sharing keyboard listener on scene renderer success, ready to move models on scene.
+
+201704051500	
+201704051748	ver0044		Press [W] key to move the model (Right only) done.
+201704051950	ver0045		Move [W] key, scale [S] key, rotate [R] key implemented, but with bug. eg. Cannot rotate on the position after moving but go back to the original rotating position and rotates. These 3 operations are using separated matrices.
+201704052108	ver0046		Move, scale, rotate bug fixed. Using custom value to move scale and rotate, so can only move right, can only scales larger, can only rotates on x axis.
+201704042333	ver0047		Basic framework design for loading multiple models in 1 scene, researching done, ready to implement code.
+
+201704061422
+201704061655	ver0048		Drawing 2 models done, but move, scale and rotate transform entire scene (both models), but i want to transform specific model only.
+201704062136	ver0049		Researching more, code changed a bit, but still didn't get the problem fixed.
+201704070016	ver0050		Testing code and researching, nothing much changed in code.
+
+201704071200
+201704071539	ver0051		Transform (move, scale, rotate) 2 models independently failed.	
+201704072203	ver0052		Duplicating transform related buffers (constant, vetertex, index, views) to transform independently failed.
+201704080116	ver0053		Transform (move, scale, rotate) 2 models independently failed savepoint at least without error.
+
+[ TwoCubes ]
+201704080116	ver0001		2 cubes are dran with separated constant buffer, constant buffer view, vetex buffer, vertex buffer view, index buffer, index buffer view, but in one descriptor heap, failed to transform them independently.
+
+201704091200	
+201704092045	ver0002		4 cubes, 2 pairs of 2 cubes are drawn on screen blinking, can move 1 pair independently while other pair remains on the position, but the problem is i want to move single cube independently not pairs.
+201704100203	ver0003		Still not fixed, just bunch of researching, tesing and reading.
+
+---------------------------------------------------------------------------
+C:\Users\nickj\Desktop\Season2\20170410_[Engine_movemodels_independently_done]
+---------------------------------------------------------------------------
+[ WY_PROJ_DIRECTX_12 ]
+201704101800	
+201704102000	ver0054		Transforming second model independently (rotate) success with Sam, by transforming vertices value with transpose matrices and UPDATE to GPU!
+
+201704112004
+201704120119	ver0055		Namespace and type definitions understanding, cannot include "ShaderStructure.h" problem solved before refactoring.
+
+201704121500
+201704122207 	ver0056		Loading different texture on different models done, to hold texture related informatins on classes.
+201704130122	ver0057		MySpecialModelObj class vertices and indices tested.
+
+201704131500	
+201704132020	ver0058		MySpecialModelObj class vertex buffer and index buffer resources init working.
+201704132144	ver0059		MySpecialModelObj class texture buffer resources init working.
+201704132244	ver0060		MySpecialModelObj class texture buffer SRV init on descriptor heap with offset working.
+201704140219	ver0061		MySpecialModelObj class transform rotate update subresources app crash problem unsolved.
+
+201704141500
+201704141816	ver0062		MySpecialModelObj class transform rotate success.
+201704141938	ver0063		MtlLoader project created for testing, imported MtlLoader to main project working.
+201704142008	ver0064		Setup texture buffer resources with image path loaded from MtlLoader.
+201704150145	ver0065		Material setup succes, ready for SSAO screen space ambient occlusion material processing.
+
+---------------------------------------------------------------------------
+C:\Users\nickj\Desktop\Season2\20170415_[Engine_gameditor_scenemanager]
+---------------------------------------------------------------------------
+[ WY_PROJ_DIRECTX_12 ]
+201704151600
+201704151800	ver0066		Savepoint with Sam.
+
+201704181500
+201704182039	ver0067		Loading normal complete.
+201704182224	ver0068		Custom pixel value calculated with custom light values texture changed, shadow added but not rendered properly.
+201704190100	ver0069		Normal index 2, vertex buffer index 8 values not matching problem not solved.
+
+201704191400	
+201704191908	ver0070		36 elemented initialized on vertex buffer (rectangular model), init normal vectors for each vertex done.
+201704192213	ver0071		Point light started, diffuse light tested, not sure if it is correct.
+201704190120	ver0072		Ambient + Diffuse + Specular lighting implemented, look a bit weird for me not sure if this is correct.
+
+[blenderExport]
+201704211700
+201704211933	ver0001		Calculate triangulated cube vertices, texture coordinates, normals, faces printed tested.
+201704212241	ver0002		Exporting data to file tested, but the order is different then the actual OBJ file exported from Blender.
+
+201704221500
+201704221820	ver0003		Exporting data with correct order failed, using print to debug and have tried everyting i could to match the actual OBJ file exported from Blender.
+
+[blenderExporter]
+201704221922	ver0001		Ignoring the orders, writing vertex indices, texture coordinates, normals to file done.
+201704222004	ver0002		Formatting the file to match the actual OBJ format, formatted faces (v/t/n indices) write to file done.
+201704222020	ver0003		Formatted vertices, texture coordinates and normals done.
+201704230130	ver0004		Loading myOBJ.txt on my engine savepoint.
+201704230230	ver0005		Export material started.	
+
+[ WY_PROJ_DIRECTX_12 ]
+201704230130	ver0073		Blender exporter loading myOBJ.txt tested, 2 model is loaded, 1 is loaded with myOBJ.txt stays idle, other one is the actual OBJ loaded model, press Q to move and press W to rotate the actual OBJ loaded model, to compare the result
+201704242000	ver0074		Savepoint.
+
+[blenderImporter]
+201704231600
+201704232029	ver0001		Import myOBJ.txt create mesh with data from myOBJ.txt tested.
+201704230017	ver0002		Loading texture image with texture coordinates from myOBJ.txt rendered all white problem unsolved, vertices read in in format 3,2,1.
+201704240221	ver0003		Import texture image material and texture setup done with texture coordinates data loaded from myOBJ.txt, need to change to material viewport shading mode to see texture, comparing result, the texture is inverted from original
+
+201704241430
+201704241630	ver0004		Texture inverted when imported problem unsolved.
+201704241700	ver0005		Still texture inverted problem unsolved, savepoint before Sam.
+
+---------------------------------------------------------------------------
+C:\Users\nickj\Desktop\Season2\20170424_[Engine_blenderexporter_coordincatesystems]
+---------------------------------------------------------------------------
+[blenderExporter]
+201704251800
+201704252000	ver0006 	Exporter savepoint sent to Sam.
+
+201704262040
+201704260240	ver0007		Exporting vertices value wrong so that the texture is loaded inversely problem solved.
+
+[blenderImporter]
+201704251800
+201704252000	ver0006 	Importer savepoint sent to Sam. Understanding of coordinate systems.
+
+201704262040
+201704260240	ver0007		Code not changed, Importing myOBJ.txt loading texture correctly by fixing exporter side done.
+
+
+[BlenderExporterImporterProj] 
+201704240110	ver0001 	Savepoint, saved [blenderImporter] ver0007 + [blenderExporter] ver0007.
+
+201704271600
+201704271940	ver0002		Export material informations, except illum values, newmtl, Ka, Kd, Ks, Ke, d, Ni, Ns, map_Kd export done.
+201704280100	ver0003		Import material informations with different naming conventions done + commented.
+201704290124	ver0004
+
+201704291500
+201704291903	ver0005		Exporting myOBJ.txt vertex coordinates with different coordinate system options using bool flags done.
+201704292235	ver0006		Importing myOBJ.txt with different coordinate system options always shows same result done.
+201704292303	ver0007		Exporting coordinate system option setting done, eg. Up, forward flag num true > 1 or  == 0 or X up X forward invalid --> Default Z up Y forward exported.
+201704300046	ver0008		Testing DirectX 12 my engine import with different coordinate system exported through Blender.
+
+
+201704301500
+201704301917	ver0009		Importing my blenderExporter exported myOBJ.txt to my DirectX12 engine, manually converting coordinate system for each cases done (commented).
+201704302004	ver0010		Analyzed coodinate system conversion mechanism downloaded + DirectX12 working import savepoint.
+201705010045	ver0011		BlenderExporter draw normal line test, missing 2 normal lines for 2 vertices each problem unsolved.
+
+[ WY_PROJ_DIRECTX_12 ]
+
+201704290126	ver0075		Loading myOBJ.txt Z up Y forward conversion done + savepoint.
+201704300045	ver0076		Testing import with different coordinate system options exported with my blenderExporter, understanding conversion mechanism from Blender to DirectX.
+
+201704301800	
+201704301914	ver0077		(Added to BlenderExporterImporterProj)Importing myOBJ.txt with all coodinate system options exported from my blenderExporter manually (commented) tested done.
+201705010045	ver0078		Savepoint.
+
+---------------------------------------------------------------------------
+C:\Users\nickj\Desktop\Season2\20170501_[Engine_vertexnormalintro_vertexoptimizationintro]
+---------------------------------------------------------------------------
+[BlenderExporterImporterProj] 
+201705011800
+201705012000	ver0012		Draw surface normal on each faces done, savepoint with Sam.
+
+201705110437	ver0013		No texture --> no texture coordinates --> cannot export error handling done.
+201705110711	ver0014		Exporting coordinate axis model Y up Z forward, loading with my WY_PROJ_DIRECTX_12 engine.
+
+201705142158	ver0015		Export camera model with global vertices coordinates.
+201705150139	ver0016		Coordinate axis model UV texture added.
+
+[ WY_PROJ_DIRECTX_12 ]
+201705011800
+201705012000	ver0079		Savepoint with Sam.
+
+201705042222	
+201705050110	ver0080		Mouse lisntener click is working but position x and y are all 0.
+
+201705051547 	ver0081		DirectXTK mouselistener position x y are all 0 problem solved, was because i was print with %f, where mouse.x y are integer.
+201705061624 	ver0082		Save-point before separating classes, [MySpecialModelObj, MyModelObj, MyModelMtl], [SpecialModelObj, ModelObj, ModelMtl].
+201705061944	ver0083		Separated classes, reading mtllib from OBJ file done, just need to read myOBJ.txt to retrieve MTL file path + texture image path using relative path substringed from OBJ file path.
+201705070001	ver0084		Load OBJ --> Automatically read in MTL using mtllib element in OBJ tested done.
+201705070043	ver0085		Refactoring classes MyModelObj, MyModelMtl, MySpecialModelObj save-point. Now My- prefix is for my custom Blender exporter (MyMTL.txt file format is different with .mtl file format), and without the My- prefix is for the default OBJ file.
+201705110330	ver0086		Projection and un-projection algorithm code imported on Util class tested.
+201705110357	ver0087		Point class created, rendered on point (2,1,5) tested.
+201705110406	ver0088		Projection and un-projection on window size change tested.
+201705110712	ver0089		Loading coordinate axis model done, but couldn't load it on the given 2D screen space position using my un-projection code.
+
+201705131530
+201706131918	ver0090		Loading cootdinate axis on given screen space coordinate position.
+201705132217	ver0091		Camera class implemented, press C key to switch camera views.
+	
+201705141600
+201705141837	ver0092		Coordinate axis model position update on screen change, so that the model is rendered always on same position on screen space.
+201705142158	ver0093		Camera model exported with global vertices so the model is rendered half behind the eye position model origin.
+201705150130	ver0094		Auto increment descriptor index  when loading texture SRV resources. 
+201705151800	ver0095		Save-point before Sam.
+
+[ App3 ]
+201705041300
+201705042021	ver0001		Drawing line working but with error messages, multiple PSO for multiple primitive topology type didn't work.
+201705042123	ver0002		Drawing line from point to point function done, but still have the error message.
+201705042221	ver0003 	Drawing point using diamond shape small quad to be recognized easily done. Draw point is to debug the unprojection.
+201705050110	ver0004		Unprojection testing, not finished. Tried to test the mouse position values on my engine (WY_PROJ_DIRECTX_12), but found a new error that the mouse posisiton x and y are always 0.
+
+201705051600	
+201705052216	ver0005		Failed to calculate the un-projected point.
+
+201705061500	
+201705060000	ver0006		Debugging unprojection not done.
+201705071608	ver0007		Projection - Local vertex (0,0,0) converted to screen coordinate (300,400) done.
+201705072028	ver0008		Without using DirectX XMVector3Project() function, converted projection manually done.
+
+201705082200
+201705080055	ver0009		DirectXTK mouselistener imported for debugging.
+201705090101	ver0010		Projection - testing other coordinate (1,1,0) projected as (114, 14) sccreen space pixel coordinate tested.
+
+201705091600
+201705091911	ver0011		(1,1,1) --> Project --> (228, 128) --> Unproject --> (1,1,1) tested.
+201705091925	ver0012		Working projection --> unprojection. Un-projection need a clip space Z value to calculate the local vertex coordinate tested.
+201705092238	ver0013		Unprojection doesn't need other extra conversions, just need to invert the projection algorithm, but the problem is i need to set the 2D screen space coordinate Z value as 1, or else the conversion will be wrong.
+
+201705102244	
+201705110101	ver0014		Projection and un-projection code modularized into functions, and stupid run-time error XMMatrixMultiply problem is solved by casting with static_cast<XMMATRIX>
+201705110150	ver0015		Functions description commented with Javadoc format.
+201705110203	ver0016		Ready to import.
+
+201705110203	ver0017		Save-point, imported onto WY_PROJ_DIRECTX_12_ver0083.
+
+
+---------------------------------------------------------------------------
+C:\Users\nickj\Desktop\Season2\20170515_[Engine_refactoring]
+---------------------------------------------------------------------------
+[BlenderExporterImporterProj] 
+201705151800	ver0017		Save-point.
+201705151555	ver0018		Exporting camera with global vertex not local vertex coordinate values.
+201705302303	ver0019		Found that exporting is not the problem, going to have to duplicate the vertices on DirectX 12 engine side.
+
+[ WY_PROJ_DIRECTX_12 ]
+201705151800
+201705152000	ver0096		Refactoring started with Sam.
+
+201705201600
+201705210139	ver0097		Documenting + commenting MyModelLoader.cpp.
+
+201705211700
+201705211923	ver0098		Documenting + commenting MyModelObj.cpp.
+201705212150	ver0099		Documenting + commenting MyModelMtl.cpp.
+201705220050	ver0100		Documenting + commenting MySpecialModelObj.cpp not done.
+
+201705221630
+201705230012	ver0101		Documenting + commenting MySpecialModelObj.cpp done.
+
+201705230045	ver0102		Save-point before refactoring Sample3DSceneRenderer.cpp init 1 line.
+201705230141	ver0103		Sample3DSceneRenderer.cpp init 1 line done.
+
+201705251900
+201705252340	ver0104		Documenting + commenting Sample3DSceneRenderer.cpp 
+
+201705262200
+201705270130	ver0105		Documenting + commenting Util.cpp Camera.cpp
+
+201705272120	ver0106		All files 80 characters per line, codes + comments.
+201705272300	ver0107		Save-point to be sent to Sam.
+
+201706011800
+201706012220	ver0108		MyModelObj newly commented, ready to inherit from class ModelObj. (ModelObj - Standard OBJ, MyModelObj - My custom OBJ)
+201706020030	ver0109		Refactoring MyModelLoader complete, now can load both standard OBJ and custom OBJ. Automatically read MTL too.
+
+---------------------------------------------------------------------------
+C:\Users\nickj\Desktop\Season2\20170603_[Engine_constantbuffer]
+---------------------------------------------------------------------------
+[ TwoCubes ]
+201706041500	ver0004		Savepoint brought from ver0003, to test the multi constant buffer framework
+
+[ WY_CB ]
+201706041600
+201706050135	ver0001		Comparing sample codes downloaded from Braynzar Soft, to understand the multi constant buffer framework.
+
+201706051800	ver0002		Save-point.
+201706052220	ver0003		Drawing a single cube with constant buffer success, with descriptor heap + SetGraphicsRootDescriptorTable() function.
+201706052250	ver0004		Drawing 2 cubes with constant buffer success, with no descriptor heap + SetGraphicsConstantBufferView() functio. But the second cube is rendered wrong.
+201706060040	ver0005		Second cube is not drawn correctly savepoint.
+
+201706081600	ver0006		Fixing second cube rendering problem. Second cube rendered properly and is translated and rotating around its own local coordinate axis using constant buffer.
+201706082110	ver0007		Third cube added for double checking and testing. Ready to import to WY_PROJ_DIRECTX_12 ver0111.
+
+[ WY_PROJ_DIRECTX_12 ]
+
+201706081600
+201706082100	ver0112		Save-point before importing the constant buffer framework. from WY_CB_ver0007
+201706090005	ver0113		Render a single cube using constant buffer framework imported, root signature CBV descriptor table changed to descriptor only, so i can use SetGraphicRootConstantBufferView() to set the constant buffer resource directly, instead of descriptors inside descriptor heap using SetGraphicsRootDescriptorTable() function. Root signature changed resources runtime error unsolved.
+
+
+201706091600
+201706092223	ver0114		Root signature root parameter index 0 changed from CBV descriptor table type to CBV descriptor type, so i can set graphics root CBV directly. A single cube rendered with constant buffer tested.
+201706092300	ver0115		Rendering 2 cubes and 2 models with constant buffer tested without texture. For debugging purpose, textures, camera model and coordinate axis model is not rendered.
+201706100040	ver0116		Rendering 2 cubes, other models rendered below second cubes are rendered on the same position as second cube problem unsolved.
+
+201706101800
+201706102020	ver0117		2 cubes 2 models are rendered properly on its own constant buffer alignment index, using for loop to iterate through model list data structure to set its constant buffers to be used on rendering each model.
+201706110110	ver0118		SRV descriptor index framework implemented, now the SRV descriptor automatically incremented only if the texture resources init is succesful, so each model now has a SRV descriptor to be used for texture rendering. All models in the model list data structure is rendered with its own CBV and SRV for texture rendering.
+
+201706111800
+201706111850	ver0119		Camera class adjusted, constant buffer framework applied, so camera class is now holding only eye, at, up, view and projection matrices. (Model matrix related deleted)
+201706111920	ver0120		Main coordinate axis model rendering on projected world space working. Camera models are rendered too without texture.
+201706112350	ver0121		MySpecialModelObj.cpp inner documenting done.
+201706120010	ver0122		Transformation rectangular model tested. Sample3DSceneRenderer.cpp inner document + refactoring.
+
+
+[ armatureExporter ]
+
+201706130044 	ver0001		Rigging model, printing armature bone names.
+201706151600	ver0002		Rotating bone done.
+201706152000	ver0003		Rotating bone on pose mode.
+201706160025	ver0004		Rigging done, ready for export.
+---------------------------------------------------------------------------
+C:\Users\nickj\Desktop\Season2\20170616_[Life_consulting_counseling]
+---------------------------------------------------------------------------
+[ armatureExporter ]
+201706181410
+201706182038	ver0005		Printing bone tail and head vertex coordinate for export.
+201706190208	ver0006		Exporting tested, bt = bone tail coordinate, bh = bone head coordinate, E bc = bone count, exporting bone count also, start loading to my WY_PROJ_DIRECTX_12 engine.
+
+[ WY_PROJ_DIRECTX_12 ]
+201706171800	ver0123		Constant buffer framewokr save-point.
+
+201706181410
+201706182330	ver0124		ModelBone and ModelArmature created, inserting ModelBone objects onto ModelArmature object tested printed.
+201706190026	ver0125		Testing ModelArmature framework before drawing th line of bones.
+201706190206	ver0126		Loading bone objects from custom armatureExporter exported file to load the bone vertex coordinates onto ModelBone objects and draw the Line objects being held in each ModelBone object. Rendering test, Line class is only holding vertex and index buffer no constant buffer so the lines are rendered on local space whichever the last constant buffer is set.
+
+
+201706251900
+201706250045	ver0127		Line class CBV framework added.
+201706260111	ver0128		Not working on Bootcamp Windows 10, save-point.
+
+[ App1 ]
+201706190026
+201706190037	ver0001		Testing rendering lines and cube with single PSO object, error message when switching primitive type line and triangle.
+
+
+
+
+
+
+
+
+

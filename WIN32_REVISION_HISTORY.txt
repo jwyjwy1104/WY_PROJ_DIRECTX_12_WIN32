@@ -1,0 +1,171 @@
+==========================================================================
+		DirectX 12 project - Revision history
+==========================================================================
+Project name: 
+	- WY_PROJ_DIRECTX_12_WIN32.
+
+Project directory:
+	- C:\Users\nickj\Desktop\Season2\20170616_[Life_consulting_counseling]
+
+---------------------------------------------------------------------------
+C:\Users\nickj\Desktop\Season2\20170616_[Life_consulting_counseling]
+---------------------------------------------------------------------------
+[ WY_PROJ_DIRECTX_12_WIN32 ]
+
+201706271800
+201706271900	ver0001		Win32 DirectX 12 working example brought from BzTut09.
+201706272200	ver0002		Camera class ported and tested from WY_PROJ_DIRECTX_12 project.
+
+201706291500
+201706292035	ver0003		All other classes ported but not tested from WY_PROJ_DIRECTX_12 project.
+201706302330	ver0004		Some weird errors when testing model classes, cannot initialize DirectX 12 crashes unsolved.
+201707010038	ver0005		Restart from ver0003 again, changing shaders first and run to test if shaders are the problem.
+201707010125	ver0006		Third rotating cube added to test the constant buffer framework.
+201707010210	ver0007		Rectangular model loaded from file and is rendered on screen all white.
+201707010245	ver0008		Cannot load texture because of pixel shader error whenver i change to texture pixel output code brought from BzTut10.
+
+201707011400
+201707011518	ver0009		Loading texture onto the default cubes first, the texture was not first rendered properly but after debugging, found that IA (Input assembler: 24 --> 12) is the main problem that causing this rendering problem.
+201707011530	ver0010		Rectangular model texture is not rendered properly is rendered all black even though the SRV is set properly, probably is that the texture coordinate is not loaded with correct mechanism.
+201707011800	ver0011		Save-point with Sam.
+201707020010	ver0012		All classes' destructor NULL validation check before deletion.
+
+---------------------------------------------------------------------------
+C:\Users\Nickj\Desktop\Season2\20170701_[Engine_animation_interpolation_and_mechanism]
+---------------------------------------------------------------------------
+
+[ WY_PROJ_DIRECTX_12_WIN32 ]
+201707041619
+201707041745	ver0013		Clearer console output for debugging.
+201707041838	ver0014		Hardcoding rectangular model's index and vertex buffer to test the model loading framework with dynamically allocated arrays.
+201707042111	ver0015		Working dynamically allocated vertex and index buffer data on hardcoded on main.cpp.
+
+201707060022	
+201707060055	ver0016		Ported MySpecialModelObjMtl dynamically allocated init vertex and index buffer fixed, texture loaded properly on Win32 DirectX 12.
+
+201707091600	ver0017		Save-point.
+
+
+201707091600
+201707092045 	ver0018		Model transformation QWER tested.
+201707092157	ver0019		Coordinate system conversion fixed, because i thought original DirectX 12 was X left, but now since i imported to Win32 DirectX 12 i now have X pointing to the right.
+201707092215	ver0020		Util class tested. Coordinate axis model loaded on projected space tested.
+
+201707101600
+201707101955	ver0021		Creating diagrams UML, UC, SD, and implemented onto inner documents.
+201707110050	ver0022		Armature loaded but exporting armature seems having weird problems, because there is exported bones' coordinate values doesn't match the values as it looks in Blender.
+
+201707112000
+201707112050	ver0023		Armature exporting fixed and is loaded onto my engine properly. 
+201707120030	ver0024		OBJ loader coordinate system conversion code functionalize into a Util function, tested.
+
+201707131530
+201707131700	ver0025		MyModelArmature inherited from MyModelObj class, coordinate system conversion framework applied to armatures.
+201707131940	ver0026		Armature related diagrams created.
+201707140005	ver0027		Save-point.
+
+201707171600
+201707172320	ver0028		Weird linking errors appeared when i implement the MyModeAnimation.cpp with template class Queue, if i comment out the MyModelAnimation.cpp the program works fine.
+201707180032 	ver0029		Dynamically allocate queue element whenever insert in template class Queue tested using integers in main.cpp.
+	
+201707181500
+201707182140	ver0030		Loading custom exported animation file onto this engine tested using console output. Not animated on screen yet.
+
+201707201500
+201707202210	ver0031		Savepoint before porting BzTut11 code onto this project. (Font and timer framework)
+
+201707221500
+201707221855	ver0032		Loading font from file framework ported from BzTut11.
+201707222155	ver0033		Fonts rendered with FPS timer string tested.
+201707230030 	ver0034		Savepoint.
+
+201707231730
+201707232215	ver0035		Wrapper class MyFont created and tested. SRV index framework (Loading texture buffers) changed to SRV CPU and GPU handle framework tested.
+201707241750	ver0036		Animation applied to the armature bones by assigning the bone's CBV world matrix value with the transposed matrix value indicated in the animaiton file.
+
+201707261800
+201707270030	ver0037		Inner documenting new files + Adjusting old files + diagrams half way done.
+201707272300	ver0038		Inner documenting done.
+
+
+201707282320	ver0039		Critical error loading armature files unsolved, because the error disappears after crahsing onec, so i couldn't debug through it.
+				Vertex group framework started, nothing has change in code yet.
+
+[BlenderExporterImporterProj]
+201707112200	ver0020		Exporting armature with coordiante system options functionalized tested.
+201707112325	ver0021		Coordinate system onversion function also ported to original custom OBJ exporter.
+201707120023	ver0022		Coordinate system conversion function tested save-point.
+
+201707131530
+201707131700	ver0023		Armature exported with coordinate options UP and FORWARD vectors.
+201707132150	ver0024		Animation exported started, keyframe animation created.
+201707140005	ver0025		Keyframe animation export started.
+
+201707181500
+201707182140	ver0026		Animation exporter imported and tested with console output on my DirectX 12 engine.
+
+
+201707282130	ver0027		Save-point.
+201707282320	ver0028		Armature bone exporter, vertex group framework started but not done.
+
+---------------------------------------------------------------------------
+C:\Users\Nickj\Desktop\Season2\20170827_[DirectX_animation]
+---------------------------------------------------------------------------
+
+[ WY_PROJ_DIRECTX_12_WIN32 ]
+
+201708271500	ver0040		Save-point.
+
+201708282100	ver0041		Adjusted my custom animation exporter loaded and printed to test the values are correctly loaded.
+
+201708291800	ver0042		Best solution i can animate with the custom animation exporter: BlenderExporterImporterProj/animationExporter_ver0032
+
+201709052000	ver0043		Animation file format changed, now exports loc,rot and sca value to animate, but the animation is a mess when loaded because the parenting framework is not implemented yet.
+
+201709061800	ver0044		Save-point with Sam discussing problems.
+
+[ BlenderExporterImporterProj ]
+
+201708271500	ver0029		Save-point.
+201708280030	ver0030		Animation exporter exporting animation file format changed to export more animaiton data.
+
+
+201708282210	ver0031		Animation export format changed, imported to DirectX project ver0042.
+
+201708291800	ver0032		Many trials testing the correct animation frame data to export to be imported to DirectX project, closest solution remained in the code.
+201808292310	ver0033		Importing animation frame data to DirectX project 3 trials failed.
+
+201708301800	ver0034		Exporting armature bone head coordinate wrong problem fixed.
+201708310000	ver0035		6 trials on testing correct animation frame data export all failed.
+
+201709011950	ver0036		Decided to load the animation first in Blender before importing to DirectX. To import the animation in Blender i need to first import the armature with mesh and material using vertex group framework.
+201709012030	ver0037		Armature exporter vertex group framework applied, exporting with vertex group information.
+
+201709022200	ver0038		Armature importer start importing the mesh with the armature. So moving the mesh and material export code into a function and port it to the armature exporter.
+201709031700	ver0039		Armature importer importing with the mesh and matreial testing, the mesh is not loaded relative to the corresponding armature bones.
+
+201709031730	ver0040		Armature importer mesh and material is loaded properly with proper armature bones.
+201709032000	ver0041		Armature importer mesh is not mapped correctly onto corresponding armature bones, weight painting is only applied to child bone problem unsolved.
+
+201709041550	ver0042		Armature importer armature bone deform and parenting framework applied, now mesh is mapped onto correct armature bones using vertex group framework. 
+				Animation importer created to start importing the custom exported animation keyframes.
+201709042300	ver0043		Animation exporter exporting "matrix" value to import doesn't work, so i decided to create simpler test codes to find out which values i should be exporting to import correct keyframe animation data to apply proper animation.
+
+201709051640	ver0044		Animation test animationTest.blend and animationTest2.blend are created to test the animation export and import with more simpler codes. Exporting and importing the rotation quaternion value into the keyframes to apply the animation worked.
+201709051800	ver0045		Animation test exported animation imported to Blender shows exact same result animation. Hard coded importing code.
+201709051830 	ver0046		Animation test same strategy applied to not only rotation value but also location and scale value to export and import working.
+201709051850	ver0047		Animation test loc, rot and sca values need to import with ZY-X format even though how they are exported with any coordinate system export options.
+201709051900	ver0048		Animation test save-point before applying to main animation exporter and importer.
+
+201709061800	ver0049		Save-point with Sam discussing problems.
+
+201709101500	ver0050		In order to find out what exactly i should export to load the correct animation on DirectX engine, i first need to implement the parenting framework myself in DirectX project, to solve this problem i will have to figure out how the parenting framework is applied in Blender, because Blender is already did the parenting for us.
+
+201709112250	ver0051		Animation test exporting same loc,rot and sca to import back to Blender but this time without armature bones are child and parent. The child bone now doesn't transform relative to parent.
+201709120010	ver0052		Animation test many trials all failed, closest solution is kept where abstract child bone actually transform relative to parent but not perfectly.
+
+201709121600	ver0053		Animation test, animationTest3.blend and animationTest4.blend are created to test the animation export import without armature bones are connected. 
+				Now this time exporting and importing with "matrix" value does work without parent child connected when importing.
+201709121800	ver0054		Applying exact same logic to main animation exporter and importer doesn't work problem unsolved.
+
+
