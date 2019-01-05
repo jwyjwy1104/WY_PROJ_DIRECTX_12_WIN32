@@ -9,7 +9,6 @@ Objectives:
 	- 3D engine framework.
 
 Staff:
-	- Lead programmer   : Samil Chai.
 	- Junior programmer : Nick Jang.
 
 Start date: 2017-03-10
@@ -45,7 +44,7 @@ WY_PROJ_DIRECTX_12_WIN32 Win32 Environment:
 			- Graphics card : Intel(R0 Iris(TM) Graphics 6100.
 		- Boot Camp assistant version:
 			- Version:		Boot Camp Assistant 6.1.0,
-			  Copyright © 2016 Apple Inc. All rights reserved.
+			  Copyright Â© 2016 Apple Inc. All rights reserved.
 			- Created: 		Friday, July 15, 2016 
 						at 11:04 PM.
 			- Capacity: 		250GB.
